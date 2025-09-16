@@ -17,3 +17,14 @@ spec:
         image: artifactory.oneeuronet.com/oen-oneeuronet-images/myimage:latest
         ports:
         - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myimage-svc
+spec:
+  selector:
+    app: myimage
+  ports:
+  - port: 80
+    targetPort: 80
