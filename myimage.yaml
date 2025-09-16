@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myimage
-        image: artifactory.oneeuronet.com/oen-oneeuronet-images/myimage:latest
+        image: artifactory.oneeuronet.com/oen-oneeuronet-images/myimage:red
         ports:
         - containerPort: 80
 ---
