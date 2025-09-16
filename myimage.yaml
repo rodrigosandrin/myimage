@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myimage
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myimage
+  template:
+    metadata:
+      labels:
+        app: myimage
+    spec:
+      containers:
+      - name: myimage
+        image: artifactory.oneeuronet.com/oen-oneeuronet-images/myimage:latest
+        ports:
+        - containerPort: 80
